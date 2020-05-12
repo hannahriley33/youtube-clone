@@ -1,8 +1,7 @@
-export const ADD_TIRED = 'ADD_TIRED';
-export const addTired = (coffees, naps) => ({
-  type: ADD_TIRED,
+export const ADD_HYPER = 'ADD_HYPER';
+export const addHyper = (coffees) => ({
+  type: ADD_HYPER,
   payload: {
-    coffees,
-    naps
+    coffees
   }
 });
