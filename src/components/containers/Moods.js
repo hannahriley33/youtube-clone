@@ -20,17 +20,21 @@ export const getFace = state => {
 };
 
 export default class Moods extends Component {
-  state = {
-    coffees: 0,
-    snacks: 0,
-    naps: 0,
-    studies: 0
-  }
+  // use selectors to grab states
+  
+  
+  // state = {
+  //   coffees: 0,
+  //   snacks: 0,
+  //   naps: 0,
+  //   studies: 0
+  // }
+
 
   handleSelection = action => {
     switch(action.type) {
       case 'DRINK_COFFEE':
-        this.setState(state => ({ coffees: state.coffees + 1 }));
+        dispatch(addHyper(coffees))
         break;
       case 'EAT_SNACK':
         this.setState(state => ({ snacks: state.snacks + 1 }));
@@ -53,10 +57,10 @@ export default class Moods extends Component {
     return (
       <>
         <Controls>
-          <button onClick={() => this.handleSelection({ type: 'DRINK_COFFEE' })}>coffee - {coffees}</button>
-          <button onClick={() => this.handleSelection({ type: 'EAT_SNACK' })}>snacks - {snacks}</button>
-          <button onClick={() => this.handleSelection({ type: 'TAKE_NAP' })}>naps - {naps}</button>
-          <button onClick={() => this.handleSelection({ type: 'STUDY' })}>studies - {studies}</button>
+          <button onClick={() => handleSelection({ type: 'DRINK_COFFEE' })}>coffee - {coffees}</button>
+          <button onClick={() => handleSelection({ type: 'EAT_SNACK' })}>snacks - {snacks}</button>
+          <button onClick={() => handleSelection({ type: 'TAKE_NAP' })}>naps - {naps}</button>
+          <button onClick={() => handleSelection({ type: 'STUDY' })}>studies - {studies}</button>
         </Controls>
         <Face emoji={face} />
       </>
