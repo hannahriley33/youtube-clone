@@ -1,8 +1,4 @@
-export const ADD_NAP = 'ADD_NAP';
-export const addNap = (coffees, naps) => ({
-  type: ADD_NAP,
-  payload: {
-    coffees,
-    naps
-  }
+export const TAKE_NAP = 'TAKE_NAP';
+export const takeNap = () => ({
+  type: TAKE_NAP
 });

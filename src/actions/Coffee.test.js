@@ -5,10 +5,7 @@ describe('coffee/hyper actions', () => {
     const action = Coffee(1, 2);
 
     expect(action).toEqual({
-      type: DRINK_COFFEE,
-      payload: {
-        coffees: 1
-      }
+      type: DRINK_COFFEE
     });
   });
 });

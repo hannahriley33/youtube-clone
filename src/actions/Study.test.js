@@ -5,10 +5,7 @@ describe('study actions', () => {
     const action = Study(1);
 
     expect(action).toEqual({
-      type: STUDY,
-      payload: {
-        studies: 1
-      }
+      type: STUDY
     });
   });
 });
